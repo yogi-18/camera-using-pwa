@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Camera Open using PWA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container mt-5 d-flex justify-content-center align-items-end pb-5 gap-3 vh-100">
+        <button id="start" type="button" class="btn btn-lg btn-primary">Start Camera</button>
+
+        <button id="capture" type="button" class="btn btn-lg btn-primary d-none">Capture
+            <i class="bi bi-camera"></i>
+        </button>
+        <button id="restart" type="button" class="btn btn-lg btn-warning d-none">restart
+            <i class="bi bi-camera"></i>
+        </button>
+
+        <button id="close" type="button" class="btn btn-lg btn-danger d-none">Close
+            <i class="bi bi-telephone-x"></i>
+        </button>
+
+    </div>
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <div id="loader" class="d-flex align-items-center gap-2"></div>
+        <video height="200" autoplay controls id="player" class="d-none
+        "></video>
+
+        <canvas class="d-none" id="canvas" height="200px" width="300px"></canvas>
+
+    </div>
+
+    <div class="position-absolute" style=" top: 50px;right: 50px;">
+        <button id="switchCamera" type="button" class="btn btn-outline-primary btn-lg d-none"><i
+                class="bi bi-camera2"></i>
+        </button>
+    </div>
+    <script src="js/app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
